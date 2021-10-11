@@ -1,6 +1,6 @@
 # Sensorik WiSe 2021/2022 - Gruppe Lidar
 ## Gruppen-Mitglieder
-- Tobias Bayer
+- Tobias Bayer (Teamleader) 
 - Moritz Schirmer
 - Felix Rasch
 - Bruno Hermenau
