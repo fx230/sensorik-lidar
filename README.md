@@ -1,4 +1,5 @@
-# Sensorik WiSe 2021/2022 - Gruppe Lidar
+# Sensorik WiSe 2021/2022 - Gruppe Lidar 
+
 ## Gruppen-Mitglieder
 - Tobias Bayer (Teamleader) 
 - Moritz Schirmer
@@ -18,3 +19,14 @@
 - Parametrierung der Komponenten muss möglich sein (z.B. als Parameterdatei oder über GUI)
 - Datenausgabe in Diagrammform (z.B. über Paket matplotlib)
 - Dateiversionierung: Github (m-pauly/sensorik-lidar)
+
+## Projektdokumentation
+- GitHub Issues & Project-Kanbanboard
+- mehrere Office-Dokumente, geteilt über Github
+
+## Mehr Informationen zum Studienprojekt
+@Sensorik-FAS-Hochschule-Kempten
+
+Betreuer: 
+- Rainer Aue https://www.hs-kempten.de/elektrotechnik/fakultaet/personen-detailansicht/rainer-aue?tx_hisconnect_personenlisting%5Bbacklink%5D=607&cHash=effe2c6873f6c8a9f79b55b636d3bde2
+- Tim Poguntke https://www.hs-kempten.de/elektrotechnik/fakultaet/personen-detailansicht/tim-poguntke?tx_hisconnect_personenlisting%5Bbacklink%5D=607&cHash=effe2c6873f6c8a9f79b55b636d3bde2
