@@ -1,5 +1,6 @@
 # Sensorik WiSe 2021/2022 - Gruppe Lidar
-![alt text](https://images.app.goo.gl/y43ejfF2Rx7TapQB7)
+# Hochschule Kempten 
+
 ## Gruppen-Mitglieder
 - Tobias Bayer (Teamleader) 
 - Moritz Schirmer
