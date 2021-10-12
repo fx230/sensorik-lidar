@@ -26,3 +26,6 @@
 
 ## Mehr Informationen zum Studienprojekt
 @Sensorik-FAS-Hochschule-Kempten
+Betreuer: 
+- Rainer Aue https://www.hs-kempten.de/elektrotechnik/fakultaet/personen-detailansicht/rainer-aue?tx_hisconnect_personenlisting%5Bbacklink%5D=607&cHash=effe2c6873f6c8a9f79b55b636d3bde2
+- Tim Poguntke https://www.hs-kempten.de/elektrotechnik/fakultaet/personen-detailansicht/tim-poguntke?tx_hisconnect_personenlisting%5Bbacklink%5D=607&cHash=effe2c6873f6c8a9f79b55b636d3bde2
