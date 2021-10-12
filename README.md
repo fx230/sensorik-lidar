@@ -14,6 +14,7 @@
 
 ## Anwendungsinformationen
 - Sprache: Python 3.x
-- Applikation: als Jupyter-Notebook oder als eigenständige Python-Anwendung
+- Applikation: als Jupyter-Notebook
 - Parametrierung der Komponenten muss möglich sein (z.B. als Parameterdatei oder über GUI)
 - Datenausgabe in Diagrammform (z.B. über Paket matplotlib)
+- Dateiversionierung: Github (m-pauly/sensorik-lidar)
