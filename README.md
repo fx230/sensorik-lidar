@@ -24,5 +24,5 @@
 - GitHub Issues & Project-Kanbanboard
 - mehrere Office-Dokumente, geteilt über Github
 
-
-@Sensorik-FAS-Hochschule-Kempten 
+## Mehr Informationen zum Studienprojekt
+@Sensorik-FAS-Hochschule-Kempten
