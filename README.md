@@ -18,3 +18,7 @@
 - Parametrierung der Komponenten muss möglich sein (z.B. als Parameterdatei oder über GUI)
 - Datenausgabe in Diagrammform (z.B. über Paket matplotlib)
 - Dateiversionierung: Github (m-pauly/sensorik-lidar)
+
+## Projektdokumentation
+- GitHub Issues & Project-Kanbanboard
+- mehrere Office-Dokumente, geteilt über Github
