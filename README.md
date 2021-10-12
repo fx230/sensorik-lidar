@@ -1,5 +1,4 @@
-# Sensorik WiSe 2021/2022 - Gruppe Lidar
-# Hochschule Kempten 
+# Sensorik WiSe 2021/2022 - Gruppe Lidar 
 
 ## Gruppen-Mitglieder
 - Tobias Bayer (Teamleader) 
@@ -24,3 +23,6 @@
 ## Projektdokumentation
 - GitHub Issues & Project-Kanbanboard
 - mehrere Office-Dokumente, geteilt über Github
+
+
+@Sensorik-FAS-Hochschule-Kempten 
