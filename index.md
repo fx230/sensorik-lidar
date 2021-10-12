@@ -1,37 +1,32 @@
-## Willkommen in unserem Projekt zum Kurs Sensorik im Studiengang Fahrerassistenzsysteme im Wintersemester
+## Willkommen in unserem Projekt zum Kurs Sensorik im WiSe 2021/2022 - Gruppe Lidar 
 
-You can use the [editor on GitHub](https://github.com/m-pauly/sensorik-lidar/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Gruppen-Mitglieder
+- Tobias Bayer (Teamleader) 
+- Moritz Schirmer
+- Felix Rasch
+- Bruno Hermenau
+- Oliver Schmidt
+- Markus Pauly
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Beschreibung
+- Die Studierenden sollen das in der Vorlesung Sensorik vermittelte Fachwissen aus dem Bereich der FAS-Umfeldsensorik im Rahmen einer zu erstellenden Softwareapplikation praktisch einsetzen können.
+- Die Studierenden sollen ausreichende Kenntnisse erwerben, um den Nutzen einer softwaretechnischen Abbildung von FAS-Sensoren beurteilen zu können.
+- Die Studierenden sollen in der Lage sein das Signalverhalten eines FAS-Sensors (Lidars) softwaretechnisch umzusetzen.
 
-### Markdown
+## Anwendungsinformationen
+- Sprache: Python 3.x
+- Applikation: als Jupyter-Notebook
+- Parametrierung der Komponenten muss möglich sein (z.B. als Parameterdatei oder über GUI)
+- Datenausgabe in Diagrammform (z.B. über Paket matplotlib)
+- Dateiversionierung: Github (m-pauly/sensorik-lidar)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Projektdokumentation
+- GitHub Issues & Project-Kanbanboard
+- mehrere Office-Dokumente, geteilt über Github
 
-```markdown
-Syntax highlighted code block
+## Mehr Informationen zum Studienprojekt
+@Sensorik-FAS-Hochschule-Kempten
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/m-pauly/sensorik-lidar/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Betreuer: 
+- Rainer Aue https://www.hs-kempten.de/elektrotechnik/fakultaet/personen-detailansicht/rainer-aue?tx_hisconnect_personenlisting%5Bbacklink%5D=607&cHash=effe2c6873f6c8a9f79b55b636d3bde2
+- Tim Poguntke https://www.hs-kempten.de/elektrotechnik/fakultaet/personen-detailansicht/tim-poguntke?tx_hisconnect_personenlisting%5Bbacklink%5D=607&cHash=effe2c6873f6c8a9f79b55b636d3bde2
