@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Willkommen in unserem Projekt zum Kurs Sensorik im Studiengang Fahrerassistenzsysteme im Wintersemester
 
 You can use the [editor on GitHub](https://github.com/m-pauly/sensorik-lidar/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
