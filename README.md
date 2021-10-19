@@ -22,7 +22,7 @@
 
 ## Projektdokumentation
 - GitHub Issues & Project-Kanbanboard
-- mehrere Office-Dokumente, geteilt über Github
+- Software-Dokumente geteilt über Github
 
 ## Mehr Informationen zum Studienprojekt
 @Sensorik-FAS-Hochschule-Kempten
