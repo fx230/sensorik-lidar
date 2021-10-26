@@ -24,6 +24,9 @@
 - GitHub Issues & Project-Kanbanboard
 - Software-Dokumente geteilt über Github
 
+## Requirements und Issues
+https://github.com/m-pauly/sensorik-lidar/projects/1
+
 ## Mehr Informationen zum Studienprojekt
 @Sensorik-FAS-Hochschule-Kempten
 
