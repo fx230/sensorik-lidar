@@ -27,6 +27,9 @@
 ## Requirements und Issues
 https://github.com/m-pauly/sensorik-lidar/projects/1
 
+## Mehr Informationen zum Lidar
+https://de.wikipedia.org/wiki/Lidar
+
 ## Mehr Informationen zum Studienprojekt
 @Sensorik-FAS-Hochschule-Kempten
 
