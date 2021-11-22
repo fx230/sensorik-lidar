@@ -1,13 +1,7 @@
 from headerfile import *
 
 
-
-def test():
-    print("Programm started")
-
-
-if __name__ is "__main__":
-    test()
+if __name__ == '__main__':
     print("Hello")
     Help = Sensorik()
     Help.setNoise()
