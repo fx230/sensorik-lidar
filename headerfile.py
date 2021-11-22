@@ -23,20 +23,20 @@ class Sensorik():
     def setSignal(self):
         # consts:
         tstart = 0  # start time
-        tend = 1  # end time
-        npoints = 500  # number of samples
+        tend = 10  # end time
+        npoints = 500 # number of samples
 
         t = np.linspace(tstart, tend, npoints, endpoint=False)
-
+        rechteck_signal = signal.square(2 * np.pi * 5 * t)
         # plot signal:
-        plt.plot(t, signal.square(2 * np.pi * 5 * t))
-        plt.ylim(-2, 2)
-        plt.title('square - square.py')
-        plt.xlabel('t[s]')
-        plt.ylabel('x(t)')
-        plt.grid(True, which='both')
-        plt.axhline(y=0, color='k')
-        plt.show()
+        # plt.plot(t, rechteck_signal)
+        # plt.ylim(-2, 2)
+        # plt.title('square - square.py')
+        # plt.xlabel('t[s]')
+        # plt.ylabel('x(t)')
+        # plt.grid(True, which='both')
+        # plt.axhline(y=0, color='k')
+        # plt.show()
 
 
 
