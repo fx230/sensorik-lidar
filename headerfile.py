@@ -1,3 +1,4 @@
+import matplotlib
 from scipy import signal
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,14 +8,14 @@ import gc
 
 
 class Sensorik():
-    def __init__(self, Activated=False,             Leistung_Dichte_Sender=0.00,
+    def __init__(self,                              Leistung_Dichte_Sender=0.00,
                  Leistung_Dichte_Empfaenger=0.00,   Leistung_Rueckgestreut=0.00,
                  Leistung_Empfaenger=0.00,          Durchmesser_Apertur=0.00,
                  Oefnnungswinkel_Beta=0.00,         Querschnitt_Rueckgestreut=0.00,
-                 SimulationTime=[0],                FoundObjekt=[0],
+                 SimulationTime=[0],                Activated=True,
                  Objekt=0,                          FoundObjektTime=[3,4,5,6],
                  Abstand = 0,                       FoundObjektAbstand=[100,98,95,93],
-                 RelativGeschw = -1000,                 FoundObjektRelativGeschw=[1,0.97,0.97,0.98]):
+                 RelativGeschw = -1000,             FoundObjektRelativGeschw=[1,0.97,0.97,0.98]):
 
         self.Activated                   = Activated
         self.Leistung_Dichte_Sender      = Leistung_Dichte_Sender
@@ -29,7 +30,7 @@ class Sensorik():
         self.SimulationTime              = SimulationTime
         self.FoundObjektTime = FoundObjektTime
 
-        self.FoundObjekt                 = FoundObjekt
+
         self.Objekt                      = Objekt
 
         self.FoundObjektAbstand          = FoundObjektAbstand
@@ -40,6 +41,7 @@ class Sensorik():
 
         self.AbstandTime = [0]
         self.RelativGeschwTime = [0]
+        self.FoundObjekt = [0]
 
     def setNoise(self):
         self.Activated = False
@@ -60,6 +62,7 @@ class Sensorik():
 
 
     def showGraph(self):
+        matplotlib.use('TkAgg')
         #print(len(self.FoundObjekt))
         #print(len(self.SimulationTime))
         #print(self.FoundObjekt)
