@@ -6,9 +6,10 @@ from tkinter import *
 
 def main():
     root = Tk()
-    WindowPop(root)
+
 
     Help = Sensorik()
+    WindowPop(root, Help)
     Help.setNoise()
     Help.setSignal()
 

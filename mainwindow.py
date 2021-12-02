@@ -1,9 +1,10 @@
+from headerfile import*
 from main import *
 import sys
 from tkinter import *
 from tkinter import ttk
 
-def WindowPop(root):
+def WindowPop(root, Help):
     content = ttk.Frame(root)
 
     frame = ttk.Frame(content, borderwidth=6, relief="ridge", width=400, height=200)
@@ -31,7 +32,7 @@ def WindowPop(root):
     four = ttk.Checkbutton(content, text="Doppler", variable=b_doppler, onvalue=True)
 
     ############Buttons###################
-    ok = ttk.Button(content, text="Generate", command=main)
+    ok = ttk.Button(content, text="Generate", command=Help.showGraph)
     cancel = ttk.Button(content, text="Exit", command=sys.exit)
 
 

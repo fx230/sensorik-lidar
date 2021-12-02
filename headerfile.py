@@ -62,7 +62,7 @@ class Sensorik():
 
 
     def showGraph(self):
-        matplotlib.use('TkAgg')
+        #matplotlib.use('TkAgg')
         #print(len(self.FoundObjekt))
         #print(len(self.SimulationTime))
         #print(self.FoundObjekt)
