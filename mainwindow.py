@@ -28,7 +28,7 @@ f_sensorrange = 70.00
 f_field_of_view = 1.00
 
 ########### Slider ###########################
-sensorrange = Scale(content, from_=20.00, to=70.00, orient=HORIZONTAL)
+sensorrange = Scale(content, from_=20.00, to=70.00, orient=HORIZONTAL, variable=f_sensorrange)
 #filedofview = Scale(content, from_=0.00, to=10.00, variable=f_field_of_view)
 
 ###########Radiobuttons#####################
@@ -49,12 +49,12 @@ namelbl.grid(column=0, row=0, columnspan=2)
 #name.grid(column=0, row=1, columnspan=2)
 
 sensorrange.grid(column=1, row=2)
-one.grid(column=1, row=3)
-two.grid(column=1, row=4)
-three.grid(column=1, row=5)
-four.grid(column=1, row=6)
-ok.grid(column=2, row=7)
-cancel.grid(column=3, row=7)
+one.grid(column=1, row=3, sticky=W)
+two.grid(column=1, row=4, sticky=W)
+three.grid(column=1, row=5, sticky=W)
+# four.grid(column=1, row=6, sticky=W)  doppler
+ok.grid(column=2, row=7, sticky=E)
+cancel.grid(column=3, row=7, sticky=E)
 
 root.mainloop()
 
