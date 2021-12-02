@@ -1,18 +1,13 @@
-#from tkinter import *
-#tk = Tk()
-
-
-#tk.title("LiDAR Signalgenerator")
-#tk_mainwindow = Button(tk, text="Generate")
-#tk_mainwindow.pack(padx=500, pady=500)
-#tk.mainloop()
+from main import *
 import sys
 from tkinter import *
 from tkinter import ttk
 
 root = Tk()
 
+
 content = ttk.Frame(root)
+
 frame = ttk.Frame(content, borderwidth=6, relief="ridge", width=400, height=200)
 namelbl = ttk.Label(content, text="LiDar Signalgenerator")
 namelbl_sensorrange = ttk.Label(content, text="Sensorrange")
@@ -38,7 +33,7 @@ three = ttk.Checkbutton(content, text="Cushioning", variable=b_cushioning, onval
 four = ttk.Checkbutton(content, text="Doppler", variable=b_doppler, onvalue=True)
 
 ############Buttons###################
-ok = ttk.Button(content, text="Generate")
+ok = ttk.Button(content, text="Generate", command=main)
 cancel = ttk.Button(content, text="Exit", command=sys.exit)
 
 

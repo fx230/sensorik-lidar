@@ -14,7 +14,7 @@ class Sensorik():
                  SimulationTime=[0],                FoundObjekt=[0],
                  Objekt=0,                          FoundObjektTime=[3,4,5,6],
                  Abstand = 0,                       FoundObjektAbstand=[100,98,95,93],
-                 RelativGeschw = 0,                 FoundObjektRelativGeschw=[1,0.97,0.97,0.98]):
+                 RelativGeschw = -1000,                 FoundObjektRelativGeschw=[1,0.97,0.97,0.98]):
 
         self.Activated                   = Activated
         self.Leistung_Dichte_Sender      = Leistung_Dichte_Sender
@@ -37,6 +37,9 @@ class Sensorik():
 
         self.FoundObjektRelativGeschw    = FoundObjektRelativGeschw
         self.RelativGeschw                = RelativGeschw
+
+        self.AbstandTime = [0]
+        self.RelativGeschwTime = [0]
 
     def setNoise(self):
         self.Activated = False
@@ -81,7 +84,7 @@ class Sensorik():
 
 
         #Abstand zum Objekt
-        axs[1].plot(self.SimulationTime, self.FoundObjekt, color='green',
+        axs[1].plot(self.SimulationTime, self.AbstandTime, color='green',
                  linestyle='dashed', marker='o', markerfacecolor='blue', markersize=12)
         axs[1].set_title('Entfernung zu erkanntem Objekt')
         axs[1].set_xlabel('t[s]')
@@ -92,13 +95,13 @@ class Sensorik():
 
 
         #Realtivgeschwindigkeit zum Objekt
-        axs[2].plot(self.SimulationTime, self.FoundObjekt, color='green',
+        axs[2].plot(self.SimulationTime, self.RelativGeschwTime, color='green',
                  linestyle='dashed', marker='o', markerfacecolor='blue', markersize=12)
         axs[2].set_title('Realtivgeschwindigkeit gegenueber erkanntem Objekt')
         axs[2].set_xlabel('t[s]')
         axs[2].set_ylabel('Relativgeschw. in m/s')
-        axs[2].set_ylim([-2,250])
-        axs[2].text(0.2, 200, str('Relativegschwindigkeit: ' + str(self.ReltivGeschw)))
+        axs[2].set_ylim([-2,20])
+        axs[2].text(0.2, 15, str('Relativegschwindigkeit: ' + str(self.RelativGeschw)))
 
 
 
@@ -129,9 +132,13 @@ class Sensorik():
             self.RelativGeschw = -1000
 
 
-        self.FoundObjekt.append(self.Objekt)
-        self.FoundObjektAbstand.append(self.Abstand)
+
+
         self.SimulationTime.append(len(self.SimulationTime))
+
+        self.FoundObjekt.append(self.Objekt)
+        self.AbstandTime.append(self.Abstand)
+        self.RelativGeschwTime.append(self.RelativGeschw)
 
         #Warten und erneut aufrufen
         time.sleep(2)
