@@ -6,6 +6,7 @@ def main():
     Help = Sensorik()
     Help.setNoise()
     Help.setSignal()
+    Help.showGraph()
 
 
 if __name__ == '__main__':
