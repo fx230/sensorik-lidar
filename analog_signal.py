@@ -64,6 +64,31 @@ def parameters(Help):
                   plt.show()
                   #print("test plot sig")
 
+
+                  ###
+                  fig, axs = plt.subplots(3)
+                  fig.suptitle('Lidar Signal with Noise')
+
+                  # Erkanntes Objekt
+                  axs[0].plot(t, signal.square((2 * np.pi * digital_frequenz * t)))
+                  axs[0].set_ylim(-2, 2)
+                  axs[0].set_title('Send LiDAR Signal')
+                  axs[0].set_xlabel('t[ns]')
+                  axs[0].set_ylabel('x(t)')
+                  axs[0].set_grid(True, which='both')
+                  axs[0].set_axhline(y=0, color='k')
+
+                  # Abstand zum Objekt
+                  axs[1].plot(t2, signal.square((2 * np.pi * digital_frequenz * t2)) + noise)
+                  axs[1].set_ylim(-2, 2)
+                  axs[1].set_title('Received LiDAR Signal with Noise')
+                  axs[1].set_xlabel('t[ns]')
+                  axs[1].set_ylabel('x(t)')
+                  axs[1].set_grid(True, which='both')
+                  axs[1].set_axhline(y=0, color='k')
+
+                  plt.show()
+
             else:
 
                   noisepeak = 0.1
