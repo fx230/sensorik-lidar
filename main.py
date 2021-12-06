@@ -34,9 +34,7 @@ def main():
 
     def showErkannteObjekte():
        if int(Help.Abstand) < int(Help.SensorRange):
-           Help.FoundObjektAbstand = [Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand,
-                                      Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand,
-                                      Help.Abstand, Help.Abstand]
+           Help.FoundObjektAbstand = [Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand]
            Help.FoundObjektTime = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
        else:
            Help.FoundObjektAbstand = [-1,-1,-1,-1]
@@ -47,9 +45,7 @@ def main():
        #Help.Analog_Signal()
        if int(Help.Abstand) < int(Help.SensorRange):
            Help.Objekt = 1
-           Help.FoundObjektAbstand = [Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand,
-                                      Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand,
-                                      Help.Abstand, Help.Abstand]
+           Help.FoundObjektAbstand = [Help.Abstand, Help.Abstand, Help.Abstand,Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand,Help.Abstand, Help.Abstand]
            Help.FoundObjektTime = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
        else:
            Help.Objekt = 0
