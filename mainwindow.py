@@ -30,7 +30,7 @@ def WindowPop(root, Help):
     ###########Radiobuttons#####################
     one = ttk.Checkbutton(content, text="Two layer", variable=i_number_of_layers, onvalue=True)
     two = ttk.Checkbutton(content, text="Reflexion", variable=b_reflexion, onvalue=True)
-    three = ttk.Checkbutton(content, text="Cushioning", variable=b_cushioning, onvalue=True)
+    three = ttk.Checkbutton(content, text="Noise", variable=b_cushioning, onvalue=True)
     four = ttk.Checkbutton(content, text="Doppler", variable=b_doppler, onvalue=True)
 
     ############Buttons###################
@@ -48,8 +48,8 @@ def WindowPop(root, Help):
     namelbl_sensorrange.grid(column=1, row=2)
     sensorrange.grid(column=2, row=2)
 
-    one.grid(column=1, row=3, sticky=W)
-    two.grid(column=1, row=4, sticky=W)
+    # one.grid(column=1, row=3, sticky=W)
+    # two.grid(column=1, row=4, sticky=W)
     three.grid(column=1, row=5, sticky=W)
 
     # four.grid(column=1, row=6, sticky=W)  doppler
