@@ -30,7 +30,7 @@ class Sensorik():
 
         #Functions from MainWindow
         self.Noise = 0
-        self.SensorRange = 40
+        self.SensorRange = 20
 
 
         #Functions from WindowPlot

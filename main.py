@@ -18,7 +18,7 @@ def main():
     parameters(Help)
     ws = Tk()
     ws.title('Lidar Sensorik Projekt')
-    ws.geometry('500x200')
+    ws.geometry('500x270')
 
     def isChecked():
         if cb.get() == 1:
@@ -37,10 +37,11 @@ def main():
 
     def showRohdaten():
        #Help.Analog_Signal()
-       if Help.Abstand < Help.SensorRange:
-           Help.Objekt = 0
-       else:
+       if int(Help.Abstand) < int(Help.SensorRange):
            Help.Objekt = 1
+       else:
+           Help.Objekt = 0
+       print(Help.Objekt)
        parameters(Help)
 
     def setRange(Range):

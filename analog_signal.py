@@ -20,7 +20,7 @@ def parameters(Help):
       print(tend)
       npoints = 10 * digital_frequenz  # number of samples
 
-      d = int(Help.SensorRange)
+      d = int(Help.Abstand)
       delta_t = d / 3
       tstart2 = delta_t  # start time
       tend2 = tend + tstart2  # end time
