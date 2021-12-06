@@ -1,4 +1,6 @@
 from headerfile import *
+from analog_signal import *
+
 from mainwindow import *
 from tkinter import *
 import multiprocessing as mp
@@ -11,6 +13,7 @@ import tkinter as tk
 
 
 def main():
+    parameters()
     Help = Sensorik()
     ws = Tk()
     ws.title('Lidar Sensorik Projekt')
@@ -77,8 +80,6 @@ def main():
 
 
     ws.mainloop()
-
-
 
 if __name__ == '__main__':
     main()
