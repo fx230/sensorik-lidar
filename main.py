@@ -78,7 +78,7 @@ def main():
     text.configure(state='disabled')
     text.pack(side=TOP, anchor=W)
 
-    Objektentfernung = Scale(ws, from_=20.00, to=70.00, orient=HORIZONTAL, command=setObjektRange)
+    Objektentfernung = Scale(ws, from_=0.00, to=70.00, orient=HORIZONTAL, command=setObjektRange)
     Objektentfernung.pack(side=TOP, anchor=W)
 
 
@@ -88,7 +88,7 @@ def main():
     text.configure(state='disabled')
     text.pack(side=TOP, anchor=W)
 
-    SensorRange = Scale(ws, from_=20.00, to=200.00, orient=HORIZONTAL, command=setRange)
+    SensorRange = Scale(ws, from_=0.00, to=200.00, orient=HORIZONTAL, command=setRange)
     SensorRange.pack(side=TOP, anchor=W)
 
 
