@@ -4,6 +4,7 @@ import sys
 from tkinter import *
 from tkinter import ttk
 
+
 def WindowPop(root, Help):
     content = ttk.Frame(root)
 
@@ -18,24 +19,23 @@ def WindowPop(root, Help):
     ##########Declarations########################
     i_number_of_layers = BooleanVar(value=False)
     b_reflexion = BooleanVar(value=False)
-    b_cushioning = BooleanVar(value=False)
+    b_noise = BooleanVar(value=False)
     b_doppler = BooleanVar(value=False)
-    f_sensorrange = 70.00
     f_field_of_view = 1.00
 
     ########### Slider ###########################
-    sensorrange = Scale(content, from_=20.00, to=70.00, orient=HORIZONTAL, variable=f_sensorrange)
+    sensorrange = Scale(content, from_=20.00, to=70.00, orient=HORIZONTAL, variable=Help.SensorRange)
     #filedofview = Scale(content, from_=0.00, to=10.00, variable=f_field_of_view)
 
     ###########Radiobuttons#####################
     one = ttk.Checkbutton(content, text="Two layer", variable=i_number_of_layers, onvalue=True)
     two = ttk.Checkbutton(content, text="Reflexion", variable=b_reflexion, onvalue=True)
-    three = ttk.Checkbutton(content, text="Noise", variable=b_cushioning, onvalue=True)
+    three = ttk.Checkbutton(content, text="Noise", variable=Help.Noise, onvalue=True)
     four = ttk.Checkbutton(content, text="Doppler", variable=b_doppler, onvalue=True)
 
     ############Buttons###################
     showResult = ttk.Button(content, text="Show <Erkannte Objekte>", command=Help.showGraph)
-    rawData = ttk.Button(content, text="Show <Rohdaten>", command=Help.showGraph)
+    rawData = ttk.Button(content, text="Show <Rohdaten>", command=Help.setNoise)
     cancel = ttk.Button(content, text="Exit", command=Help.setActivated)
 
 
@@ -58,5 +58,7 @@ def WindowPop(root, Help):
     cancel.grid(column=3, row=7, sticky=E)
 
     root.mainloop()
+
+
 
 

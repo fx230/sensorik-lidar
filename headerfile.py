@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 import gc
+import multiprocessing
 
 
 
@@ -27,6 +28,12 @@ class Sensorik():
         self.Querschnitt_Rueckgestreut   = Querschnitt_Rueckgestreut
 
 
+        #Functions from MainWindow
+        self.Noise = 0
+        self.SensorRange = 40
+
+
+        #Functions from WindowPlot
         self.SimulationTime              = SimulationTime
         self.FoundObjektTime = FoundObjektTime
 
@@ -43,9 +50,10 @@ class Sensorik():
         self.RelativGeschwTime = [0]
         self.FoundObjekt = [0]
 
-    def setNoise(self):
-        self.Activated = False
-        #print(self.Activated)
+    def setNoise(self, Noise):
+        self.Noise = Noise
+        print(self.Noise)
+
 
     def setSignal(self):
         # consts:
@@ -147,9 +155,13 @@ class Sensorik():
         self.RelativGeschwTime.append(self.RelativGeschw)
 
         #Warten und erneut aufrufen
-        time.sleep(1)
-        if(self.Activated == True):
+        #time.sleep(1)
+
+        if(self.SimulationTime[len(self.SimulationTime)-1] < 20):
             self.showGraph()
+
+
+
 
 
 
