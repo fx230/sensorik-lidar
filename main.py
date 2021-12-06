@@ -33,6 +33,10 @@ def main():
             messagebox.showerror('Lidar Sensorik', 'Something went wrong!')
 
     def showErkannteObjekte():
+       if int(Help.Abstand) < int(Help.SensorRange):
+           Help.FoundObjektAbstand = [Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand]
+       else:
+           Help.FoundObjektAbstand = [-1,-1,-1,-1]
        Help.showGraph()
 
     def showRohdaten():
@@ -49,6 +53,7 @@ def main():
 
     def setObjektRange(Range):
         Help.Abstand = Range
+        Help.FoundObjektAbstand = [Range, Range, Range, Range]
 
     def Exit():
         sys.exit(0)
@@ -69,7 +74,7 @@ def main():
 
     text = Text(ws, state='disabled', height=1)
     text.configure(state='normal')
-    text.insert('end', 'Objektentfernung')
+    text.insert('end', 'Objektentfernung in [m]')
     text.configure(state='disabled')
     text.pack(side=TOP, anchor=W)
 
@@ -79,7 +84,7 @@ def main():
 
     text = Text(ws, state='disabled', height=1)
     text.configure(state='normal')
-    text.insert('end', 'Sensorrange')
+    text.insert('end', 'Sensorrange in [m]')
     text.configure(state='disabled')
     text.pack(side=TOP, anchor=W)
 
