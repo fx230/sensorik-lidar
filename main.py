@@ -1,7 +1,7 @@
 from headerfile import *
 from analog_signal import *
 
-from mainwindow import *
+
 from tkinter import *
 import multiprocessing as mp
 
