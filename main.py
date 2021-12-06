@@ -12,13 +12,6 @@ import tkinter as tk
 
 def main():
     Help = Sensorik()
-    #root = Tk()
-
-    #WindowPop(root, Help)
-
-
-
-    Range = 40
     ws = Tk()
     ws.title('Lidar Sensorik Projekt')
     ws.geometry('500x200')
