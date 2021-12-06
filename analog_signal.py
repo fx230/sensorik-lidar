@@ -5,9 +5,9 @@ from matplotlib import pyplot as plt
 
 def parameters():
 
-      digital_lambda = 905*10**(-9)
-      c = 3*10**8
-      digital_frequenz = digital_lambda/(3*10**8) #Frequenz = Lambda/Lichtgeschwdt ; typische Werte
+      digital_lambda = 90.5
+      digital_frequenz = 3/digital_lambda #Frequenz = Lambda/Lichtgeschwdt ; typische Werte
+      digital_frequenz = 500
       digital_amplitude = 1
       digital_pulsdauer = digital_lambda/2
       """
@@ -40,10 +40,11 @@ def parameters():
       # consts:
       tstart = 0  # start time
       tend = 1/digital_frequenz  # end time
+      print(tend)
       npoints = 10*digital_frequenz # number of samples
 
-      d = 40
-      delta_t = 40/(3*10**8)
+      d = 0.1
+      delta_t = d/3
       tstart2 = delta_t  # start time
       tend2 = tend + tstart2  # end time
       npoints2 = 10 * digital_frequenz  # number of samples
@@ -51,6 +52,7 @@ def parameters():
 
       t = np.linspace(tstart, tend, npoints, endpoint=False)
       t2 = np.linspace(tstart2, tend2, npoints2, endpoint=False)
+      print("delta_t")
       print(delta_t)
 
       # plot signal:
@@ -58,7 +60,7 @@ def parameters():
       plt.plot(t2, signal.square((2 * np.pi * digital_frequenz * t2)))
       plt.ylim(-2, 2)
       plt.title('square - square.py')
-      plt.xlabel('t[s]')
+      plt.xlabel('t[ns]')
       plt.ylabel('x(t)')
       plt.grid(True, which='both')
       plt.axhline(y=0, color='k')
