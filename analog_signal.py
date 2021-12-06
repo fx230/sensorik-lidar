@@ -53,66 +53,89 @@ def parameters(Help):
                   noisepeak = 0.1
                   noise = np.random.uniform(-noisepeak, noisepeak, npoints2)
                   # plot signal:
-                  plt.plot(t, signal.square((2 * np.pi * digital_frequenz * t)))
-                  plt.plot(t2, signal.square((2 * np.pi * digital_frequenz * t2)) + noise)
-                  plt.ylim(-2, 2)
-                  plt.title('LiDAR Signal with Noise')
-                  plt.xlabel('t[ns]')
-                  plt.ylabel('x(t)')
-                  plt.grid(True, which='both')
-                  plt.axhline(y=0, color='k')
-                  plt.show()
-                  #print("test plot sig")
+                  #plt.plot(t, signal.square((2 * np.pi * digital_frequenz * t)))
+                  #plt.plot(t2, signal.square((2 * np.pi * digital_frequenz * t2)) + noise)
+                  #plt.ylim(-2, 2)
+                  #plt.title('LiDAR Signal with Noise')
+                  #plt.xlabel('t[ns]')
+                  #plt.ylabel('x(t)')
+                  #plt.grid(True, which='both')
+                  #plt.axhline(y=0, color='k')
+                  #plt.show()
 
-
-                  ###
+                  # Plots Konfigurieren
                   fig, axs = plt.subplots(3)
                   fig.suptitle('Lidar Signal with Noise')
 
-                  # Erkanntes Objekt
+                  # Sendesignal
                   axs[0].plot(t, signal.square((2 * np.pi * digital_frequenz * t)))
                   axs[0].set_ylim(-2, 2)
-                  axs[0].set_title('Send LiDAR Signal')
+                  axs[0].set_title('Send LiDAR Signal with Noise')
                   axs[0].set_xlabel('t[ns]')
                   axs[0].set_ylabel('x(t)')
-                  # axs[0].set_grid(True, which='both')
-                  #axs[0].set_axhline(y=0, color='k')
 
-                  # Abstand zum Objekt
+                  # Empfangssignal
                   axs[1].plot(t2, signal.square((2 * np.pi * digital_frequenz * t2)) + noise)
                   axs[1].set_ylim(-2, 2)
                   axs[1].set_title('Received LiDAR Signal with Noise')
                   axs[1].set_xlabel('t[ns]')
                   axs[1].set_ylabel('x(t)')
-                  # axs[1].set_grid(True, which='both')
-                  # axs[1].set_axhline(y=0, color='k')
 
-                  # Abstand zum Objekt
+                  # Kombination
                   axs[2].plot(t2, signal.square((2 * np.pi * digital_frequenz * t2)) + noise)
                   axs[2].plot(t, signal.square((2 * np.pi * digital_frequenz * t)))
                   axs[2].set_ylim(-2, 2)
-                  axs[2].set_title('LiDAR Signal with Noise')
+                  axs[2].plt.title('LiDAR Signal with Noise')
                   axs[2].set_xlabel('t[ns]')
                   axs[2].set_ylabel('x(t)')
-                  # axs[1].set_grid(True, which='both')
-                  # axs[1].set_axhline(y=0, color='k')
+
+                  # Ausgabe
                   plt.grid(True, which='both')
+                  plt.set_axhline(y=0, color='k')
                   plt.show()
 
             else:
-
-                  noisepeak = 0.1
-                  noise = np.random.uniform(-noisepeak, noisepeak, npoints2)
                   # plot signal:
-                  plt.plot(t, signal.square(2 * np.pi * digital_frequenz * t))
-                  plt.plot(t2, signal.square(2 * np.pi * digital_frequenz * t2))
-                  plt.ylim(-2, 2)
-                  plt.title('Lidar Signal ')
-                  plt.xlabel('t[ns]')
-                  plt.ylabel('x(t)')
-                  plt.grid(True, which='both')
-                  plt.axhline(y=0, color='k')
-                  plt.show()
+                  #plt.plot(t, signal.square(2 * np.pi * digital_frequenz * t))
+                  #plt.plot(t2, signal.square(2 * np.pi * digital_frequenz * t2))
+                  #plt.ylim(-2, 2)
+                  #plt.title('Lidar Signal ')
+                  #plt.xlabel('t[ns]')
+                  #plt.ylabel('x(t)')
+                  #plt.grid(True, which='both')
+                  #plt.axhline(y=0, color='k')
+                  #plt.show()
                   #print("test plot sig")
+
+                  # Plots Konfigurieren
+                  fig, axs = plt.subplots(3)
+                  fig.suptitle('Lidar Signal without Noise')
+
+                  # Sendesignal
+                  axs[0].plot(t, signal.square(2 * np.pi * digital_frequenz * t))
+                  axs[0].set_ylim(-2, 2)
+                  axs[0].set_title('Send LiDAR Signal without Noise')
+                  axs[0].set_xlabel('t[ns]')
+                  axs[0].set_ylabel('x(t)')
+
+                  # Empfangssignal
+                  axs[1].plotplot(t2, signal.square(2 * np.pi * digital_frequenz * t2))
+                  axs[1].set_ylim(-2, 2)
+                  axs[1].set_title('Received LiDAR Signal without Noise')
+                  axs[1].set_xlabel('t[ns]')
+                  axs[1].set_ylabel('x(t)')
+
+                  # Kombination
+                  axs[2].plot(t, signal.square(2 * np.pi * digital_frequenz * t))
+                  axs[2].plot(t2, signal.square(2 * np.pi * digital_frequenz * t2))
+                  axs[2].set_ylim(-2, 2)
+                  axs[2].plt.title('LiDAR Signal without Noise')
+                  axs[2].set_xlabel('t[ns]')
+                  axs[2].set_ylabel('x(t)')
+
+                  # Ausgabe
+                  plt.grid(True, which='both')
+                  plt.set_axhline(y=0, color='k')
+                  plt.show()
 
 
