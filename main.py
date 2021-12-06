@@ -1,7 +1,7 @@
 from headerfile import *
 from mainwindow import *
 from tkinter import *
-from multiprocessing import Process
+import multiprocessing as mp
 
 
 
@@ -10,15 +10,20 @@ def main():
 
 
     Help = Sensorik()
-    WindowPop(root, Help)
+    #WindowPop(root, Help)
     Help.setNoise()
     Help.setSignal()
 
     #Show Graph, if Value is activated
-    p1 = Process(target=Help.showGraph)
-    p1.start()
-    p1.join()
+    #Help.showGraph()
 
+
+    from multiprocessing import Pool
+    pool = Pool()
+    result1 = pool.apply_async(WindowPop, [root, Help])    # evaluate "solve1(A)" asynchronously
+    result2 = pool.apply_async(Help.showGraph())    # evaluate "solve2(B)" asynchronously
+    result1.get(timeout=10)
+    result2.get(timeout=10)
 
 
 
