@@ -15,8 +15,7 @@ def main():
     Help.setSignal()
 
     #Show Graph, if Value is activated
-    while Help.Activated:
-        Help.showGraph()
+    Help.showGraph()
 
 
 

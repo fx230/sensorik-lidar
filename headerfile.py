@@ -57,7 +57,7 @@ class Sensorik():
         rechteck_signal = signal.square(2 * np.pi * 5 * t)
 
     def setActivated(self):
-        self.Activated != self.Activated
+        self.Activated = False
         time.sleep(2)
         exit(0)
 
@@ -148,6 +148,8 @@ class Sensorik():
 
         #Warten und erneut aufrufen
         time.sleep(1)
+        if(self.Activated == True):
+            self.showGraph()
 
 
 
