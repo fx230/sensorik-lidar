@@ -36,7 +36,7 @@ def WindowPop(root, Help):
     ############Buttons###################
     showResult = ttk.Button(content, text="Show <Erkannte Objekte>", command=Help.showGraph)
     rawData = ttk.Button(content, text="Show <Rohdaten>", command=Help.showGraph)
-    cancel = ttk.Button(content, text="Exit", command=sys.exit)
+    cancel = ttk.Button(content, text="Exit", command=Help.setActivated)
 
 
 

@@ -56,7 +56,9 @@ class Sensorik():
         t = np.linspace(tstart, tend, npoints, endpoint=False)
         rechteck_signal = signal.square(2 * np.pi * 5 * t)
 
-
+    def setActivated(self):
+        self.Activated != self.Activated
+        exit(0)
 
 
 
