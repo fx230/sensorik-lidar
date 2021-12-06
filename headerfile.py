@@ -15,7 +15,7 @@ class Sensorik():
                  Oefnnungswinkel_Beta=0.00,         Querschnitt_Rueckgestreut=0.00,
                  SimulationTime=[0],                Activated=True,
                  Objekt=0,                          FoundObjektTime=[3,4,5,6],
-                 Abstand = 20,                      FoundObjektAbstand=[20,20,20,20],
+                 Abstand = 0,                      FoundObjektAbstand=[0,0,0,0],
                  RelativGeschw = -1000,             FoundObjektRelativGeschw=[0,0,0,0]):
 
         self.Activated                   = Activated

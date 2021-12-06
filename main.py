@@ -37,6 +37,7 @@ def main():
            Help.FoundObjektAbstand = [Help.Abstand, Help.Abstand, Help.Abstand, Help.Abstand]
        else:
            Help.FoundObjektAbstand = [-1,-1,-1,-1]
+           Help.FoundObjektTime = [3000, 3001, 3002, 3003]
        Help.showGraph()
 
     def showRohdaten():
@@ -45,6 +46,8 @@ def main():
            Help.Objekt = 1
        else:
            Help.Objekt = 0
+           Help.FoundObjektAbstand = [-1, -1, -1, -1]
+           Help.FoundObjektTime = [3000, 3001, 3002, 3003]
        print(Help.Objekt)
        parameters(Help)
 
