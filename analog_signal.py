@@ -1,14 +1,13 @@
-
+import matplotlib.pyplot
 import numpy as np
 from matplotlib import pyplot as plt
-%matplotlib inline
-%matplotlib
+
 
 def parameters():
 
       digital_lambda = 905*10^-9
 
-      digital_frequenz = digital_lambda/2.99792458*10^8 #Frequenz = Lambda/Lichtgeschwdt ; typische Werte
+      digital_frequenz = digital_lambda/2.99792458*10**8 #Frequenz = Lambda/Lichtgeschwdt ; typische Werte
       digital_amplitude = 1
       digital_pulsdauer = digital_lambda/2
 
@@ -30,4 +29,5 @@ def parameters():
       P = 10  # period
       D = 5   # width of pulse
       sig = np.arange(N) % P < D
-      plt(sig)
+      matplotlib.pyplot.plot(sig)
+      print("test plot sig")
