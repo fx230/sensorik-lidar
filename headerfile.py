@@ -15,7 +15,7 @@ class Sensorik():
                  Oefnnungswinkel_Beta=0.00,         Querschnitt_Rueckgestreut=0.00,
                  SimulationTime=[0],                Activated=True,
                  Objekt=0,                          FoundObjektTime=[3,4,5,6],
-                 Abstand = 0,                       FoundObjektAbstand=[100,98,95,93],
+                 Abstand = 20,                       FoundObjektAbstand=[100,98,95,93],
                  RelativGeschw = -1000,             FoundObjektRelativGeschw=[1,0.97,0.97,0.98]):
 
         self.Activated                   = Activated
@@ -43,12 +43,14 @@ class Sensorik():
         self.FoundObjektAbstand          = FoundObjektAbstand
         self.Abstand                     = Abstand
 
+
         self.FoundObjektRelativGeschw    = FoundObjektRelativGeschw
         self.RelativGeschw                = RelativGeschw
 
         self.AbstandTime = [0]
         self.RelativGeschwTime = [0]
         self.FoundObjekt = [0]
+
 
     def setNoise(self, Noise):
         self.Noise = Noise
