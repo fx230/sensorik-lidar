@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def parameters():
+def parameters(Help):
 
       digital_lambda = 90.5
       # digital_frequenz = 3/digital_lambda #Frequenz = Lichtgeschwdt/lambda ; typische Werte
@@ -20,7 +20,7 @@ def parameters():
       print(tend)
       npoints = 10 * digital_frequenz  # number of samples
 
-      d = 40
+      d = int(Help.SensorRange)
       delta_t = d / 3
       tstart2 = delta_t  # start time
       tend2 = tend + tstart2  # end time
@@ -32,7 +32,7 @@ def parameters():
       calc_distanz = 2 * (tstart2 - tstart) * 1.5
       print(calc_distanz)
 
-      Noise = True
+      Noise = Help.Noise
 
       if Noise:
             noisepeak = 0.1
@@ -47,7 +47,7 @@ def parameters():
             plt.grid(True, which='both')
             plt.axhline(y=0, color='k')
             plt.show()
-            print("test plot sig")
+            #print("test plot sig")
 
       else:
 
@@ -63,6 +63,6 @@ def parameters():
             plt.grid(True, which='both')
             plt.axhline(y=0, color='k')
             plt.show()
-            print("test plot sig")
+            #print("test plot sig")
 
 

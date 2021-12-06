@@ -13,8 +13,9 @@ import tkinter as tk
 
 
 def main():
-    parameters()
+
     Help = Sensorik()
+    parameters(Help)
     ws = Tk()
     ws.title('Lidar Sensorik Projekt')
     ws.geometry('500x200')
@@ -36,10 +37,17 @@ def main():
 
     def showRohdaten():
        #Help.Analog_Signal()
-        Help.showGraph()
+       if Help.Abstand < Help.SensorRange:
+           Help.Objekt = 0
+       else:
+           Help.Objekt = 1
+       parameters(Help)
 
     def setRange(Range):
         Help.SensorRange = Range
+
+    def setObjektRange(Range):
+        Help.Abstand = Range
 
     def Exit():
         sys.exit(0)
@@ -60,13 +68,22 @@ def main():
 
     text = Text(ws, state='disabled', height=1)
     text.configure(state='normal')
+    text.insert('end', 'Objektentfernung')
+    text.configure(state='disabled')
+    text.pack(side=TOP, anchor=W)
+
+    Objektentfernung = Scale(ws, from_=20.00, to=70.00, orient=HORIZONTAL, command=setObjektRange)
+    Objektentfernung.pack(side=TOP, anchor=W)
+
+
+    text = Text(ws, state='disabled', height=1)
+    text.configure(state='normal')
     text.insert('end', 'Sensorrange')
     text.configure(state='disabled')
     text.pack(side=TOP, anchor=W)
 
-    Scaler = Scale(ws, from_=20.00, to=70.00, orient=HORIZONTAL, command=setRange)
-    Scaler.pack(side=TOP, anchor=W)
-
+    SensorRange = Scale(ws, from_=20.00, to=200.00, orient=HORIZONTAL, command=setRange)
+    SensorRange.pack(side=TOP, anchor=W)
 
 
     Rohdaten = Button(ws, text='Show <Rohdaten>', padx=20, pady=5, command=showRohdaten)
@@ -75,7 +92,7 @@ def main():
     ErkannteObjekte = Button(ws, text='Show <Erkannte Objekte>', padx=20, pady=5, command=showErkannteObjekte)
     ErkannteObjekte.pack(padx=5, pady=15, side=tk.LEFT)
 
-    exit = Button(ws, text='EXIT', state=DISABLED, padx=20, pady=5, command=Exit)
+    exit = Button(ws, text='EXIT', state=ACTIVE, padx=20, pady=5, command=Exit)
     exit.pack(padx=5, pady=15, side=tk.LEFT)
 
 
