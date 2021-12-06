@@ -1,6 +1,7 @@
 from headerfile import *
 from mainwindow import *
 from tkinter import *
+import multiprocessing as mp
 
 
 
@@ -14,7 +15,7 @@ def main():
     Help.setSignal()
 
     #Show Graph, if Value is activated
-    if Help.Activated:
+    while Help.Activated:
         Help.showGraph()
 
 

@@ -58,6 +58,7 @@ class Sensorik():
 
     def setActivated(self):
         self.Activated != self.Activated
+        time.sleep(2)
         exit(0)
 
 
@@ -146,8 +147,7 @@ class Sensorik():
         self.RelativGeschwTime.append(self.RelativGeschw)
 
         #Warten und erneut aufrufen
-        time.sleep(2)
-        self.showGraph()
+        time.sleep(1)
 
 
 
