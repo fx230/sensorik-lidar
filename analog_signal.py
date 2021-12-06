@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 
 def parameters():
-
+      """
       digital_lambda = 905*10^-9
 
       digital_frequenz = digital_lambda/2.99792458*10**8 #Frequenz = Lambda/Lichtgeschwdt ; typische Werte
@@ -29,5 +29,26 @@ def parameters():
       P = 10  # period
       D = 5   # width of pulse
       sig = np.arange(N) % P < D
-      matplotlib.pyplot.plot(sig)
+      matplotlib.pyplot.plot(sig)"""
+
+      from scipy import signal
+      import numpy as np
+      import matplotlib.pyplot as plt
+
+      # consts:
+      tstart = 0  # start time
+      tend = 1  # end time
+      npoints = 500  # number of samples
+
+      t = np.linspace(tstart, tend, npoints, endpoint=False)
+
+      # plot signal:
+      plt.plot(t, signal.square(2 * np.pi * 5 * t))
+      plt.ylim(-2, 2)
+      plt.title('square - square.py')
+      plt.xlabel('t[s]')
+      plt.ylabel('x(t)')
+      plt.grid(True, which='both')
+      plt.axhline(y=0, color='k')
+      plt.show()
       print("test plot sig")
