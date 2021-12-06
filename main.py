@@ -14,10 +14,10 @@ def main():
     Help.setSignal()
 
     #Show Graph, if Value is activated
-    if Help.Activated == True:
-        Help.showGraph()
+    #if Help.Activated == True:
+    Help.showGraph()
 
-    root.mainloop()
+
 
 
 if __name__ == '__main__':

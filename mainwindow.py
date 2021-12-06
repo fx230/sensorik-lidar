@@ -7,7 +7,9 @@ from tkinter import ttk
 def WindowPop(root, Help):
     content = ttk.Frame(root)
 
-    frame = ttk.Frame(content, borderwidth=6, relief="ridge", width=400, height=200)
+    frame = {}
+    frame = ttk.Frame(content, borderwidth=6, relief="ridge", width=600, height=300)
+
     namelbl = ttk.Label(content, text="LiDar Signalgenerator")
     namelbl_sensorrange = ttk.Label(content, text="Sensorrange")
     name = ttk.Entry(content)
@@ -32,7 +34,8 @@ def WindowPop(root, Help):
     four = ttk.Checkbutton(content, text="Doppler", variable=b_doppler, onvalue=True)
 
     ############Buttons###################
-    ok = ttk.Button(content, text="Generate", command=Help.showGraph)
+    showResult = ttk.Button(content, text="Show <Erkannte Objekte>", command=Help.showGraph)
+    rawData = ttk.Button(content, text="Show <Rohdaten>", command=Help.showGraph)
     cancel = ttk.Button(content, text="Exit", command=sys.exit)
 
 
@@ -42,12 +45,16 @@ def WindowPop(root, Help):
     namelbl.grid(column=0, row=0, columnspan=2)
     #name.grid(column=0, row=1, columnspan=2)
 
-    sensorrange.grid(column=1, row=2)
+    namelbl_sensorrange.grid(column=1, row=2)
+    sensorrange.grid(column=2, row=2)
+
     one.grid(column=1, row=3, sticky=W)
     two.grid(column=1, row=4, sticky=W)
     three.grid(column=1, row=5, sticky=W)
+
     # four.grid(column=1, row=6, sticky=W)  doppler
-    ok.grid(column=2, row=7, sticky=E)
+    showResult.grid(column=1, row=7, sticky=E)
+    rawData.grid(column=2, row=7, sticky=E)
     cancel.grid(column=3, row=7, sticky=E)
 
     root.mainloop()
