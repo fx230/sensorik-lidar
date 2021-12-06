@@ -66,7 +66,7 @@ def parameters(Help):
 
 
                   ###
-                  fig, axs = plt.subplots(2)
+                  fig, axs = plt.subplots(3)
                   fig.suptitle('Lidar Signal with Noise')
 
                   # Erkanntes Objekt
@@ -85,7 +85,17 @@ def parameters(Help):
                   axs[1].set_xlabel('t[ns]')
                   axs[1].set_ylabel('x(t)')
                   # axs[1].set_grid(True, which='both')
-                  #axs[1].set_axhline(y=0, color='k')
+                  # axs[1].set_axhline(y=0, color='k')
+
+                  # Abstand zum Objekt
+                  axs[2].plot(t2, signal.square((2 * np.pi * digital_frequenz * t2)) + noise)
+                  axs[2].plot(t, signal.square((2 * np.pi * digital_frequenz * t)))
+                  axs[2].set_ylim(-2, 2)
+                  axs[2].plt.title('LiDAR Signal with Noise')
+                  axs[2].set_xlabel('t[ns]')
+                  axs[2].set_ylabel('x(t)')
+                  # axs[1].set_grid(True, which='both')
+                  # axs[1].set_axhline(y=0, color='k')
 
                   plt.show()
 
