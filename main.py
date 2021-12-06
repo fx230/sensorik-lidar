@@ -1,7 +1,7 @@
 from headerfile import *
 from mainwindow import *
 from tkinter import *
-import multiprocessing as mp
+from multiprocessing import Process
 
 
 
@@ -15,7 +15,9 @@ def main():
     Help.setSignal()
 
     #Show Graph, if Value is activated
-    Help.showGraph()
+    p1 = Process(target=Help.showGraph)
+    p1.start()
+    p1.join()
 
 
 
