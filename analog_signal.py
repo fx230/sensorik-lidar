@@ -85,13 +85,12 @@ def parameters(Help):
                   axs[2].plot(t2, signal.square((2 * np.pi * digital_frequenz * t2)) + noise)
                   axs[2].plot(t, signal.square((2 * np.pi * digital_frequenz * t)))
                   axs[2].set_ylim(-2, 2)
-                  axs[2].plt.title('LiDAR Signal with Noise')
+                  axs[2].set_title('LiDAR Signal with Noise')
                   axs[2].set_xlabel('t[ns]')
                   axs[2].set_ylabel('x(t)')
 
                   # Ausgabe
                   plt.grid(True, which='both')
-                  plt.set_axhline(y=0, color='k')
                   plt.show()
 
             else:
@@ -119,7 +118,7 @@ def parameters(Help):
                   axs[0].set_ylabel('x(t)')
 
                   # Empfangssignal
-                  axs[1].plotplot(t2, signal.square(2 * np.pi * digital_frequenz * t2))
+                  axs[1].plot(t2, signal.square(2 * np.pi * digital_frequenz * t2))
                   axs[1].set_ylim(-2, 2)
                   axs[1].set_title('Received LiDAR Signal without Noise')
                   axs[1].set_xlabel('t[ns]')
@@ -129,13 +128,12 @@ def parameters(Help):
                   axs[2].plot(t, signal.square(2 * np.pi * digital_frequenz * t))
                   axs[2].plot(t2, signal.square(2 * np.pi * digital_frequenz * t2))
                   axs[2].set_ylim(-2, 2)
-                  axs[2].plt.title('LiDAR Signal without Noise')
+                  axs[2].set_title('LiDAR Signal without Noise')
                   axs[2].set_xlabel('t[ns]')
                   axs[2].set_ylabel('x(t)')
 
                   # Ausgabe
                   plt.grid(True, which='both')
-                  plt.set_axhline(y=0, color='k')
                   plt.show()
 
 
