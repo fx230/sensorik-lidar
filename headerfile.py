@@ -14,9 +14,9 @@ class Sensorik():
                  Leistung_Empfaenger=0.00,          Durchmesser_Apertur=0.00,
                  Oefnnungswinkel_Beta=0.00,         Querschnitt_Rueckgestreut=0.00,
                  SimulationTime=[0],                Activated=True,
-                 Objekt=0,                          FoundObjektTime=[3,4,5,6],
-                 Abstand = 0,                      FoundObjektAbstand=[0,0,0,0],
-                 RelativGeschw = -1000,             FoundObjektRelativGeschw=[0,0,0,0]):
+                 Objekt=0,                          FoundObjektTime=[3,4,5,6,7,8,9,10,11,12],
+                 Abstand = 0,                      FoundObjektAbstand=[0,0,0,0,0,0,0,0,0,0],
+                 RelativGeschw = -1000,             FoundObjektRelativGeschw=[0,0,0,0,0,0,0,0,0,0]):
 
         self.Activated                   = Activated
         self.Leistung_Dichte_Sender      = Leistung_Dichte_Sender
