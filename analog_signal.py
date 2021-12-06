@@ -4,13 +4,13 @@ from matplotlib import pyplot as plt
 
 
 def parameters():
-      """
-      digital_lambda = 905*10^-9
+
+      digital_lambda = 905*10**(-9)
 
       digital_frequenz = digital_lambda/2.99792458*10**8 #Frequenz = Lambda/Lichtgeschwdt ; typische Werte
       digital_amplitude = 1
       digital_pulsdauer = digital_lambda/2
-
+      """
       digital_signal = {"Frequenz": digital_frequenz, "Amplitude": digital_amplitude, "Pulsdauer": digital_pulsdauer}
 
 
@@ -31,20 +31,23 @@ def parameters():
       sig = np.arange(N) % P < D
       matplotlib.pyplot.plot(sig)"""
 
+
+      ######## sendesignal#########
       from scipy import signal
       import numpy as np
       import matplotlib.pyplot as plt
 
       # consts:
       tstart = 0  # start time
-      tend = 1  # end time
-      npoints = 500  # number of samples
+      tend = 1/digital_frequenz  # end time
+      npoints = 10*digital_frequenz # number of samples
 
       t = np.linspace(tstart, tend, npoints, endpoint=False)
+      print(digital_frequenz)
 
       # plot signal:
-      plt.plot(t, signal.square(2 * np.pi * 5 * t))
-      plt.ylim(-2, 2)
+      plt.plot(t, signal.square((2 * np.pi * digital_frequenz * t)))
+      plt.ylim(-0.5, 2)
       plt.title('square - square.py')
       plt.xlabel('t[s]')
       plt.ylabel('x(t)')
