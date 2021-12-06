@@ -32,7 +32,7 @@ def parameters():
       calc_distanz = 2 * (tstart2 - tstart) * 1.5
       print(calc_distanz)
 
-      Noise = False
+      Noise = True
 
       if Noise:
             noisepeak = 0.1
