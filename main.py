@@ -15,7 +15,7 @@ import tkinter as tk
 def main():
 
     Help = Sensorik()
-    parameters(Help)
+
     ws = Tk()
     ws.title('Lidar Sensorik Projekt')
     ws.geometry('500x270')
